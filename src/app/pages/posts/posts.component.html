@@ -1,0 +1,15 @@
+<ul class="list-group">
+
+  <app-post *ngFor="let mensaje of mensajes | async"
+            [mensaje]="mensaje"
+            (clickPost)="escuchaClick( $event )"></app-post>
+
+
+  <!--  FORMA BASICA DE HACER EL NGFOR SOBRE LOS REGISTROS DEVUELTOS POR EL SERCICIO-->
+  <!--  <li *ngFor="let mensaje of mensajes | async" class="list-group-item">-->
+  <!--    <h2>{{ mensaje.title }}</h2>-->
+  <!--    <p>-->
+  <!--      {{ mensaje.body }}-->
+  <!--    </p>-->
+  <!--  </li>-->
+</ul>
